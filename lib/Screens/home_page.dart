@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:redwallet/Screens/test.dart';
+import 'package:redwallet/widget/my_button.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -30,6 +32,117 @@ class _HomePageState extends State<HomePage> {
         ),
         title: const Text(''),
       ),
+
+
+       body: SafeArea(
+        child: 
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                children:  [
+                  Text(
+                    'Hai',
+                    style: TextStyle(
+                      fontSize: 28,
+                      fontWeight: FontWeight.bold,
+                    ),
+                  ),
+                  Text(
+                    ' Sam!',
+                    style: TextStyle(fontSize: 28),
+                  ),
+                ],
+              ),
+            ),
+            
+            SizedBox(height: 20),
+            
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                //send
+                MyButton(
+                  iconImagePath: 'img/send.png', 
+                  buttonText: 'Send',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TestPage()),
+                    );
+                  },
+                ),
+
+                //Qris
+                MyButton(
+                  iconImagePath: 'img/qris.png', 
+                  buttonText: 'Qris',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TestPage()),
+                    );
+                  },
+                ),
+
+                //top up
+                MyButton(
+                  iconImagePath: 'img/topup.png', 
+                  buttonText: 'Top-up',
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TestPage()),
+                    );
+                  },
+                ),
+              ],
+            ),
+
+            SizedBox(height: 30),
+
+            Padding(
+              padding: EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children:  [
+                  Row(
+                    children: [
+                      Text(
+                        'My',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                      Text(
+                        ' Cards',
+                        style: TextStyle(
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
+                  IconButton(
+                    icon: Icon(Icons.add),
+                    onPressed: () {
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(builder: (context) => TestPage()),
+                      );
+                    },
+                  ),
+                ],
+              ),
+            ),
+
+
+            SizedBox(height: 20),
+            
+          ]
+      ),
+       )
     );
 
     
