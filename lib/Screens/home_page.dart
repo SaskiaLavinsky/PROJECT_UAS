@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -30,28 +29,6 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         title: const Text(''),
-      ),
-      
-
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Color.fromARGB(255, 255, 255, 255),
-        color: Colors.red.shade700,
-        animationDuration: Duration(milliseconds: 500),
-        items: [
-          Icon(
-            Icons.face_retouching_natural,
-            color: Colors.white,
-          ),
-          Icon(
-            Icons.home,
-            color: Colors.white,
-          ),
-          Icon(
-            Icons.logout,
-            color: Colors.white,
-          ),
-        ],
-        
       ),
     );
 

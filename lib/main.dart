@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'Screens/login.dart';
+import 'package:redwallet/widget/navbar.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,7 +14,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: const Color.fromARGB(255, 255, 255, 255)),
         useMaterial3: true,
       ),
-      home: LoginPage(),
+      home: MyBottomNavigationBar(),
       debugShowCheckedModeBanner: false,
     );
   }
