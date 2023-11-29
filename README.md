@@ -1,6 +1,6 @@
 # red_wallet
 
-A new Flutter project.
+Project UAS Mobile Programming 
 
 ## Getting Started
 
