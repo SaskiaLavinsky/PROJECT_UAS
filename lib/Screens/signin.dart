@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:redwallet/Screens/home_page.dart';
-import 'package:redwallet/utils/color_utils.dart'; // Import the color_utils.dart file here
+import 'package:redwallet/utils/color_utils.dart';
+import 'package:redwallet/widget/navbar.dart'; // Import the color_utils.dart file here
 
 
 class SignInScreen extends StatefulWidget {
@@ -83,7 +83,7 @@ class _SignInScreenState extends State<SignInScreen> {
                   onPressed: () {
                     Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  HomePage()), // Ganti LoginPage dengan halaman tujuan yang ingin Anda buka
+                  MaterialPageRoute(builder: (context) =>  MyBottomNavigationBar()), // Ganti LoginPage dengan halaman tujuan yang ingin Anda buka
                   );// Aksi saat tombol login ditekan
                   },
                   style: ElevatedButton.styleFrom(
