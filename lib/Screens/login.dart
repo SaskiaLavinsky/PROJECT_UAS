@@ -30,7 +30,7 @@ class _LoginPageState extends State<LoginPage> {
             ),
           ),
           Align(
-            alignment: const Alignment(0.0, -0.2),
+            alignment: const Alignment(0.0, -0.1),
             child: ElevatedButton(
               onPressed: () {
                 // Navigasi ke halaman LoginPage.dart
