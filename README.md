@@ -1,16 +1,14 @@
-# red_wallet
+# Mobile_Banking
 
-Project UAS Mobile Programming 
+A new Flutter project.
 
 ## Getting Started
+Nama Project : Red_Wallet
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+Nama Kelompok
+1) Saskia Lavinsky           535220176
+2) Marvin Gultom             535220198
+3) Aulia Dwi Yulianti        535220178
+4) Nashwa Sawitri Dewayani   535220220
+5) Shannon Andrea            535220204
+6) Carisha Puspa Gozali      535220185    
