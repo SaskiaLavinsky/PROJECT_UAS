@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:redwallet/Screens/pick_card.dart';
 import 'package:redwallet/Screens/test.dart';
+
+import 'package:redwallet/utils/cards.dart';
 import 'package:redwallet/widget/my_button.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
 
 class HomePage extends StatefulWidget {
@@ -11,7 +15,10 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-   
+  
+  //pagecontroller
+  final _controller = PageController();
+    
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,9 +39,7 @@ class _HomePageState extends State<HomePage> {
         ),
         title: const Text(''),
       ),
-
-
-       body: SafeArea(
+      body: SafeArea(
         child: 
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -70,7 +75,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TestPage()),
+                      MaterialPageRoute(builder: (context) => PickCard()),
                     );
                   },
                 ),
@@ -140,9 +145,65 @@ class _HomePageState extends State<HomePage> {
 
             SizedBox(height: 20),
             
-          ]
+            //cards
+            Container(
+              height: 200,
+              child: PageView(
+                scrollDirection: Axis.horizontal,
+                controller: _controller,
+                children: [
+                MyCard(
+                  Balance: 6290000,
+                  cardNumber: 1182121520,
+                  expiryMonth:10,
+                  expiryYear:25,
+                  Color: Color.fromARGB(255, 145, 17, 0),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TestPage()),
+                    );
+                  },
+                ),
+                
+                MyCard(
+                  Balance: 22680000,
+                  cardNumber: 1182215350,
+                  expiryMonth:12,
+                  expiryYear:23,
+                  Color: Color.fromRGBO(188, 8, 8, 1),
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (context) => TestPage()),
+                    );
+                  },
+                  ),
+                  ]
+                  ),),
+              SizedBox(height: 10),
+              Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SmoothPageIndicator(
+                      controller: _controller,
+                      count: 2,
+                      effect: WormEffect( 
+                          strokeWidth: 3, 
+                          radius: 6, 
+                          dotHeight: 8, 
+                          dotWidth: 8, 
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+          ],
+        ),
       ),
-       )
+
+      
     );
 
     
@@ -153,7 +214,7 @@ class MyClipper extends CustomClipper<Path> {
   @override
   Path getClip(Size size) {
     final path = Path();
-    path.lineTo(0, size.height - 50);
+    path.lineTo(0, size.height - 40);
     path.quadraticBezierTo(size.width / 2, size.height, size.width, size.height - 40);
     path.lineTo(size.width, 0);
     path.close();

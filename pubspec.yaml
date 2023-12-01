@@ -37,6 +37,7 @@ dependencies:
   cupertino_icons: ^1.0.2
   font_awesome_flutter: ^10.6.0
   curved_navigation_bar: ^1.0.3
+  smooth_page_indicator: ^1.1.0
 
 dev_dependencies:
   flutter_test:
@@ -89,4 +90,3 @@ flutter:
   #         weight: 700
   #
   # For details regarding fonts from package dependencies,
-  # see https://flutter.dev/custom-fonts/#from-packages
