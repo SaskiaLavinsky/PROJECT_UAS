@@ -3,6 +3,7 @@ import 'package:redwallet/Screens/add_card.dart';
 import 'package:redwallet/Screens/history_card.dart';
 import 'package:redwallet/Screens/pick_card.dart';
 import 'package:redwallet/Screens/pick_card2.dart';
+import 'package:redwallet/Screens/pick_card3.dart';
 import 'package:redwallet/Screens/test.dart';
 import 'package:redwallet/utils/cards.dart';
 import 'package:redwallet/widget/my_button.dart';
@@ -100,7 +101,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TestPage()),
+                      MaterialPageRoute(builder: (context) => PickCard3()),
                     );
                   },
                 ),
