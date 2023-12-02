@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:redwallet/Screens/scan_qr.dart';
 import 'package:redwallet/Screens/show_qr.dart';
-import 'package:redwallet/Screens/test.dart';
 
 
 class NavbarQr extends StatefulWidget {
@@ -14,7 +14,7 @@ class _NavbarQrState extends State<NavbarQr> {
   int _currentIndex = 0;
 
   final List<Widget> _pages = [
-    TestPage(), 
+    QRViewExample(), 
     ShowQr(), 
   ];
 
