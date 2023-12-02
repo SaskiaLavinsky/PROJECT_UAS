@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:redwallet/Screens/add_card.dart';
 import 'package:redwallet/Screens/pick_card.dart';
 import 'package:redwallet/Screens/pick_card2.dart';
 import 'package:redwallet/Screens/test.dart';
@@ -133,7 +134,7 @@ class _HomePageState extends State<HomePage> {
                     onPressed: () {
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => TestPage()),
+                        MaterialPageRoute(builder: (context) => AddCard()),
                       );
                     },
                   ),

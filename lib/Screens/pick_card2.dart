@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:redwallet/Screens/add_card.dart';
 import 'package:redwallet/utils/cards.dart';
-import 'package:redwallet/Screens/test.dart';
 import 'package:redwallet/widget/navbarqr.dart';
 
 
@@ -85,7 +85,7 @@ class _PickCard2State extends State<PickCard2> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TestPage()),
+                MaterialPageRoute(builder: (context) => AddCard()),
               );
             },
             child: Icon(Icons.add), 
