@@ -1,0 +1,50 @@
+import 'package:flutter/material.dart';
+
+class MyButtontopup extends StatelessWidget {
+  final String iconImagePath;
+  final String buttonText;
+  final VoidCallback onTap;
+
+  const MyButtontopup({
+    Key? key,
+    required this.iconImagePath,
+    required this.buttonText,
+    required this.onTap,
+  }) : super(key: key);
+  
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: onTap,
+      child: Column(
+        //item
+        children: [
+          Container(
+            height: 250,
+            width: 250,
+            padding: EdgeInsets.all(10),
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 137, 84, 84),
+              borderRadius: BorderRadius.circular(20),
+            ),
+            child: Center(
+              child: Image.asset(iconImagePath),
+            ),
+          ),
+          SizedBox(
+            height: 10,
+          ),
+          //teks
+          Text(
+            buttonText,
+            style: TextStyle(
+              fontSize: 18,
+              fontWeight: FontWeight.bold,
+              color: Colors.grey[700]
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}

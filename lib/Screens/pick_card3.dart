@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:redwallet/Screens/add_card.dart';
-import 'package:redwallet/Screens/test.dart';
+import 'package:redwallet/Screens/top_up.dart';
 import 'package:redwallet/utils/cards.dart';
 
 
@@ -57,7 +57,7 @@ class _PickCard3State extends State<PickCard3> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TestPage()),
+                MaterialPageRoute(builder: (context) => TopUp()),
               );
             },
           ),
@@ -74,7 +74,7 @@ class _PickCard3State extends State<PickCard3> {
             onTap: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => TestPage()),
+                MaterialPageRoute(builder: (context) => TopUp()),
               );
             },
           ),
