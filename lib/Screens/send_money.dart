@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:redwallet/Screens/pin.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/services.dart';
-import 'package:redwallet/Screens/test.dart';
 
 
 
@@ -125,7 +125,7 @@ class _SendMoneyState extends State<SendMoney> {
                 onPressed: () {
                   Navigator.push(
                     context,
-                    MaterialPageRoute(builder: (context) => TestPage()),
+                    MaterialPageRoute(builder: (context) => PinEntryScreen()),
                   );
                 },
                 style: ElevatedButton.styleFrom(
