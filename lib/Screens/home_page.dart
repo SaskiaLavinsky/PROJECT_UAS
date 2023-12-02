@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:redwallet/Screens/pick_card.dart';
+import 'package:redwallet/Screens/pick_card2.dart';
 import 'package:redwallet/Screens/test.dart';
 
 import 'package:redwallet/utils/cards.dart';
@@ -87,7 +88,7 @@ class _HomePageState extends State<HomePage> {
                   onTap: () {
                     Navigator.push(
                       context,
-                      MaterialPageRoute(builder: (context) => TestPage()),
+                      MaterialPageRoute(builder: (context) => PickCard2()),
                     );
                   },
                 ),
