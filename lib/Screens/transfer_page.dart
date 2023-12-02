@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:redwallet/Screens/send_money.dart';
-import 'package:redwallet/Screens/test.dart';
+import 'package:redwallet/Screens/send_money2.dart';
 import 'package:redwallet/data/listdata.dart';
 
 class TransferPage extends StatefulWidget {
@@ -231,7 +231,7 @@ class _TransferPageState extends State<TransferPage> {
                           Navigator.push(
                             context,
                             MaterialPageRoute(
-                              builder: (context) => TestPage  (),
+                              builder: (context) => SendMoney2  (),
                             ),
                           );
                         },
