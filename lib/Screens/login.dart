@@ -33,10 +33,9 @@ class _LoginPageState extends State<LoginPage> {
             alignment: const Alignment(0.0, -0.1),
             child: ElevatedButton(
               onPressed: () {
-                // Navigasi ke halaman LoginPage.dart
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const SignInScreen()), // Ganti LoginPage dengan halaman tujuan yang ingin Anda buka
+                  MaterialPageRoute(builder: (context) => const SignInScreen()),
                 );
               },
               style: ElevatedButton.styleFrom(

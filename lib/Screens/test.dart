@@ -12,7 +12,7 @@ class TestPage extends StatelessWidget {
           style: TextStyle(
             fontSize: 24,
             fontWeight: FontWeight.bold,
-            color: Colors.green, // Ubah warna teks jika diperlukan
+            color: Colors.green, 
           ),
         ),
       ),

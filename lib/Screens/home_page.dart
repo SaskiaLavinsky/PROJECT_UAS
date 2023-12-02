@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:redwallet/Screens/pick_card.dart';
 import 'package:redwallet/Screens/pick_card2.dart';
 import 'package:redwallet/Screens/test.dart';
-
 import 'package:redwallet/utils/cards.dart';
 import 'package:redwallet/widget/my_button.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
@@ -16,8 +15,7 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  
-  //pagecontroller
+ 
   final _controller = PageController();
     
   @override

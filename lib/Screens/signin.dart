@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:redwallet/Screens/login.dart';
 import 'package:redwallet/utils/color_utils.dart';
-import 'package:redwallet/widget/navbar.dart'; // Import the color_utils.dart file here
+import 'package:redwallet/widget/navbar.dart'; 
 
 
 class SignInScreen extends StatefulWidget {
@@ -21,10 +22,13 @@ class _SignInScreenState extends State<SignInScreen> {
         actions: [
           IconButton(
             icon: Icon(Icons.close),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-          ),
+               onPressed: () {
+                  Navigator.pushReplacement(
+                    context,
+                     MaterialPageRoute(builder: (context) => LoginPage()),
+                   );
+                },
+            ),
         ],
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -52,7 +56,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 Column(
                   children: [
                     logoWidget("img/logo.png"),
-                    SizedBox(height: 5), // Spacer untuk jarak antara logo dan teks
+                    SizedBox(height: 5), 
                     Text(
                       "Welcome back! You've been missed",
                       style: TextStyle(
@@ -83,8 +87,8 @@ class _SignInScreenState extends State<SignInScreen> {
                   onPressed: () {
                     Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) =>  MyBottomNavigationBar()), // Ganti LoginPage dengan halaman tujuan yang ingin Anda buka
-                  );// Aksi saat tombol login ditekan
+                  MaterialPageRoute(builder: (context) =>  MyBottomNavigationBar()), 
+                  );
                   },
                   style: ElevatedButton.styleFrom(
                     backgroundColor: const Color.fromARGB(255, 131, 9, 0),

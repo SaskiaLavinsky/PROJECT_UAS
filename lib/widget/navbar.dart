@@ -78,9 +78,9 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
           ),),
               onPressed: () {
                 setState(() {
-                  _currentIndex = 1; // Ini indeks untuk Home
+                  _currentIndex = 1; 
                 });
-                Navigator.of(context).pop(); // Tutup dialog konfirmasi
+                Navigator.of(context).pop(); 
               },
             ),
 
@@ -93,8 +93,8 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
             color: Colors.red
           ),),
               onPressed: () {
-                Navigator.of(context).pop(); // Tutup dialog konfirmasi
-                Navigator.pushReplacement( // Gunakan pushReplacement agar tidak ada history ke halaman sebelumnya
+                Navigator.of(context).pop(); 
+                Navigator.pushReplacement( 
                   context,
                   MaterialPageRoute(builder: (context) => SignInScreen()),
                 );
