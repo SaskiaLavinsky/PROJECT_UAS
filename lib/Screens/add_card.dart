@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/services.dart';
-import 'package:redwallet/Screens/test.dart';
+import 'package:redwallet/Screens/succes_add_card.dart';
 
 class AddCard extends StatefulWidget {
   const AddCard({Key? key}) : super(key: key);
@@ -501,7 +501,7 @@ class _AddCardState extends State<AddCard> {
                                 if (_formKey.currentState!.validate()) {
                                 Navigator.push(
                                   context,
-                                  MaterialPageRoute(builder: (context) => TestPage()),
+                                  MaterialPageRoute(builder: (context) => SuccesAddCard()),
                                 );
                                 }
                               },

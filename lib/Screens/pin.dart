@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:redwallet/Screens/test.dart';
+import 'package:redwallet/Screens/succes.dart';
 
 
 class PinEntryScreen extends StatefulWidget {
@@ -19,7 +19,7 @@ class _PinEntryScreenState extends State<PinEntryScreen> {
     if (value == '1234') {
       Navigator.push(
         context,
-        MaterialPageRoute(builder: (context) => TestPage()),
+        MaterialPageRoute(builder: (context) => Succes()),
       );
     } else {
       showDialog(
