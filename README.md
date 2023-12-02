@@ -1,6 +1,6 @@
 # Mobile_Banking
 
-A new Flutter project.
+Mobile Programming Flutter
 
 ## Getting Started
 Nama Project : Red_Wallet
