@@ -5,7 +5,7 @@ Mobile Programming Flutter
 ## Getting Started
 Nama Project : Red_Wallet
 
-Kelompok 2
+Kelompok 2 - TI D
 
 Nama Kelompok:
 1) Saskia Lavinsky           535220176
