@@ -67,3 +67,70 @@ List<money> satu() {
 
   return[ovo, dana, spay, qris, transfer,transfers, hnm,bk,starbucks, upwork,];
 }
+
+List<money> dua() {
+
+  money upwork = money();
+  upwork.name ='Salary';
+  upwork.fee='+Rp 20.750.000';
+  upwork.time='Nov 01,2023';
+  upwork.image='gr.png';
+  upwork.buy =false;
+
+  money upwork1 = money();
+  upwork1.name ='Salary';
+  upwork1.fee='+Rp 20.750.000';
+  upwork1.time='Oct 01,2023';
+  upwork1.image='gr.png';
+  upwork1.buy =false;
+
+  money admin = money();
+  admin.name ='Admin Fee';
+  admin.fee='-Rp 10.000';
+  admin.time='Nov 01,2023';
+  admin.image='admin.jpg';
+  admin.buy =true;
+  money admin1 = money();
+  admin1.name ='Admin Fee';
+  admin1.fee='-Rp 10.000';
+  admin1.time='Oct 01,2023';
+  admin1.image='admin.jpg';
+  admin1.buy =true;
+
+  money transfer = money();
+  transfer.buy = false;
+  transfer.fee = '+Rp 12.000.000';
+  transfer.image = 'tfan.jpg';
+  transfer.name = 'transfer';
+  transfer.time ='Nov 18,2023';  
+
+  money starbucks = money();
+  starbucks.buy = true;
+  starbucks.fee = '-Rp 2.250.000';
+  starbucks.image = 'sb.png';
+  starbucks.name = 'Starbucks';
+  starbucks.time ='Nov 14,2023';  
+
+  money converse = money();
+  converse.buy = true;
+  converse.fee = '-Rp 7.250.000';
+  converse.image = 'cnvrse.jpg';
+  converse.name = 'Converse';
+  converse.time ='Oct 26,2023'; 
+  
+  money puma = money();
+  puma.buy = true;
+  puma.fee = '-Rp 5.550.000';
+  puma.image = 'puma.jpg';
+  puma.name = 'Puma';
+  puma.time ='Nov 02,2023'; 
+
+  money nike = money();
+  nike.buy = true;
+  nike.fee = '-Rp 15.750.000';
+  nike.image = 'nike.jpg';
+  nike.name = 'Nike';
+  nike.time ='today'; 
+
+  return[nike,transfer, starbucks, puma, admin, upwork,converse,admin1,upwork1];
+}
