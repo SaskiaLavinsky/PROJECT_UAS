@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:redwallet/Screens/Forgot_password.dart';
 import 'package:redwallet/Screens/login.dart';
 import 'package:redwallet/utils/color_utils.dart';
 import 'package:redwallet/widget/navbar.dart'; 
@@ -14,6 +15,7 @@ class SignInScreen extends StatefulWidget {
 class _SignInScreenState extends State<SignInScreen> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  bool _obscurePassword = true;
 
   void signUserIn() async {
 
@@ -164,7 +166,7 @@ class _SignInScreenState extends State<SignInScreen> {
                 SizedBox(height: 30),
                 TextField(
                   controller: _passwordController,
-                  obscureText: true,
+                  obscureText: _obscurePassword,
                   decoration: InputDecoration(
                     hintText: 'Password',
                     filled: true,
@@ -174,9 +176,40 @@ class _SignInScreenState extends State<SignInScreen> {
                       borderSide: BorderSide.none,
                     ),
                     contentPadding: EdgeInsets.symmetric(vertical: 15, horizontal: 20),
+                    suffixIcon: IconButton(
+                      onPressed: (){
+                        setState(() {
+                          _obscurePassword = !_obscurePassword;
+                        });
+                    }, icon:Icon(
+                        _obscurePassword ? Icons.visibility_off : Icons.visibility,
+                        color: Colors.grey,
+                      ),)
                   ),
                 ),
                 SizedBox(height: 30),
+                  Positioned(
+                    top: 20,
+                    right: 0,
+                    child: TextButton(
+                      onPressed: () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(builder: (context) => ForgotPasswordPage()),
+                        );
+                      },
+                      child: Text(
+                        'Forgot Password?',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 16,
+                          decoration: TextDecoration.none,
+                        ),
+                      ),
+                    ),
+                  ),
+
+
                 ElevatedButton(
                   onPressed: signUserIn, 
                   style: ElevatedButton.styleFrom(
