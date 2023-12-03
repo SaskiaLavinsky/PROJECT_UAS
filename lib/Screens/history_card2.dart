@@ -1,6 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:redwallet/Screens/top_up.dart';
+import 'package:redwallet/Screens/transfer_page.dart';
 import 'package:redwallet/data/biodata.dart';
+import 'package:redwallet/widget/my_button.dart';
 import 'package:redwallet/widget/navbar.dart';
+import 'package:redwallet/widget/navbarqr.dart';
 
 class HistoryCard2 extends StatelessWidget {
   const HistoryCard2({Key? key}) : super(key: key);
@@ -19,12 +23,50 @@ class HistoryCard2 extends StatelessWidget {
         child: CustomScrollView(
           slivers: [
             SliverToBoxAdapter(
-              child: SizedBox(height:300, child: _head(context)),
+              child: SizedBox(height:340, child: _head(context)),
             ),
             SliverToBoxAdapter(
   child: Column(
     crossAxisAlignment: CrossAxisAlignment.start,
     children: [
+      Padding(
+        padding: const EdgeInsets.symmetric(horizontal: 15),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            MyButton(
+              iconImagePath: 'img/send.png', 
+              buttonText: 'Send',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TransferPage()),
+                );
+              },
+            ),
+            MyButton(
+              iconImagePath: 'img/qris.png', 
+              buttonText: 'Qris',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => NavbarQr()),
+                );
+              },
+            ),
+            MyButton(
+              iconImagePath: 'img/topup.png', 
+              buttonText: 'Top-up',
+              onTap: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => TopUp()),
+                );
+              },
+            ),
+          ],
+        ),
+      ),
       Padding(
         padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 10),
         child: Row(
@@ -131,13 +173,167 @@ class HistoryCard2 extends StatelessWidget {
                       ),
                     ),
                   ),
-                      
+                      Padding(
+                        padding: const EdgeInsets.only(top: 35, left: 10),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Hello', 
+                              style:TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 25,
+                                color: Color.fromARGB(255, 224, 223, 223),
+                              )
+                            ),
+                            Text(
+                              'Lets track your expenses this month', 
+                              style:TextStyle(
+                                fontWeight: FontWeight.w500,
+                                fontSize: 18,
+                                color: Colors.white,
+                              )
+                            )
+                          ],
+                        ),
+                      )
                     ],
                   ),
                 ),
               ],
             ),
-            
+            Positioned(
+              top: 140,
+              left: 37,
+              child: Container(
+                height: 170,
+                width: 320,
+                decoration: BoxDecoration(
+                  boxShadow: [
+                    BoxShadow(
+                      color: Color.fromRGBO(47, 125, 121, 0.3),
+                      offset: Offset(0, 6),
+                      blurRadius: 12,
+                      spreadRadius: 6,
+                    )
+                  ],
+                  color: Color.fromRGBO(188, 8, 8, 1),
+                  borderRadius: BorderRadius.circular(15),    
+                ),
+                child: Column(
+                  children: [
+                    SizedBox(height: 10),
+                    Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 15),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          Text(
+                            'Total Balance',
+                            style:TextStyle(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 16,
+                              color: Colors.white,
+                            )
+                          ),
+                    
+                        
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 7),
+                    Padding(
+                      padding: const EdgeInsets.only(left: 15),
+                      child: Row(
+                        children: [
+                          Text(
+                            'Rp 22.680.000',
+                            style: TextStyle(
+                              fontWeight: FontWeight.bold,
+                              fontSize: 25,
+                              color: Colors.white,
+                            ),)
+                        ],
+                      ),
+                      ),
+                      SizedBox(height: 25),
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                          child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 13,
+                                  backgroundColor: Color.fromARGB(255, 173, 1, 1),
+                                  child: Icon(
+                                    Icons.arrow_downward,
+                                    color: Color.fromARGB(255, 216, 216, 216),
+                                    size: 19,
+                                  ),
+                                ),
+                                SizedBox(width: 7),
+                                Text(
+                                  'Income',
+                                  style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 216, 216, 216),
+                                ),),
+                              ],
+                            ),
+                            Row(
+                              children: [
+                                CircleAvatar(
+                                  radius: 13,
+                                  backgroundColor: Color.fromARGB(255, 173, 1, 1),
+                                  child: Icon(
+                                    Icons.arrow_upward,
+                                    color: Color.fromARGB(255, 216, 216, 216),
+                                    size: 19,
+                                  ),
+                                ),
+                                SizedBox(width: 7),
+                                Text(
+                                  'Expenses',
+                                  style: TextStyle(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 16,
+                                  color: Color.fromARGB(255, 216, 216, 216),
+                                  ),
+                                ),
+                              ],
+                            )
+                            ]
+                          ),
+                        ),
+                        SizedBox(height: 6),
+                        Padding(padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                          children: [
+                            Text(
+                            'Rp 32.750.000',
+                            style:TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 17,
+                              color: Colors.white,
+                            )
+                          ),
+                          Text(
+                            'Rp 23.560.000',
+                            style:TextStyle(
+                              fontWeight: FontWeight.w600,
+                              fontSize: 17,
+                              color: Colors.white,
+                            )
+                          ),
+                          ]),)
+                  ],
+                ),
+              ),
+            )
           ],
         );
   }
